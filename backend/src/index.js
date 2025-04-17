@@ -18,9 +18,9 @@ const app = express();
 // import cors from "cors";
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://livepoll-anjx.onrender.com"], // Allow both local and deployed frontend
+  origin: ["http://localhost:5173", "https://live-poll-vwg3.vercel.app"], // Allow both local and deployed frontend
   credentials: true, // Allow cookies to be sent with requests
-}));
+}))
 
 // Middleware
 app.use(cookieParser());
@@ -51,3 +51,4 @@ await connectDB();
 httpServer.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
