@@ -6,7 +6,7 @@ A full-stack MERN web app that allows users to create, vote on, and view live po
 
 ## 📸 Screenshots
 
-> _Make sure your Drive links are set to “Anyone with the link can view”._
+
 
 ![Screenshot](https://drive.google.com/uc?id=1L5GV02KJPWAA3w7mRURBvQt4RfWePVSF)
 ![Screenshot](https://drive.google.com/uc?id=1AKPNk4zQI45x6eA2P0uai_N3ZTys142d)
