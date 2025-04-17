@@ -120,4 +120,30 @@ Run the backend and frontend servers and test your project in the browser at:
 [http://localhost:3000](http://localhost:5173)
 
 
+## 🔁 State Sharing & Room Management Architecture
+
+The application implements real-time vote synchronization using a **pub/sub model** with **WebSocket (Socket.io)** connections.
+
+### 🧠 How It Works
+
+- Each poll corresponds to a unique **room**, identified by the poll's MongoDB `_id`.
+- When a user casts a vote:
+  1. The frontend sends the vote to the backend via Socket.io.
+  2. The backend **validates** the vote.
+  3. The vote is **persisted to MongoDB**.
+  4. Updated poll results are **broadcast** to all users in the same room.
+  5. An **in-memory cache (Redis)** is used to store and manage active room state.
+
+### ✅ Key Benefits
+
+- **Real-time Synchronization**: Votes instantly reflect across all connected clients.
+- **Scalable Architecture**: Redis supports horizontal scaling across instances.
+- **Efficient Room Management**: Inactive rooms are auto-cleaned on poll expiration.
+- **Reliable Data Source**: MongoDB acts as the single source of truth.
+- **Smooth UX**: Frontend uses **React Query** for optimistic updates, ensuring immediate visual feedback while syncing with the backend.
+
+This setup guarantees both performance and consistency in high-traffic, real-time voting scenarios.
+
+
+
 
