@@ -71,3 +71,53 @@ CLIENT_URL=http://localhost:5173" > .env
 
 # 4. Start backend server
 npm run dev
+
+### 💻 Frontend Setup
+
+```bash
+# Navigate to the frontend directory
+cd frontend
+
+# Install frontend dependencies
+npm install
+
+# Create a .env file and add your backend URL
+# Example:
+echo "VITE_BACKEND_URL=http://localhost:3000" > .env
+
+# Start the frontend development server
+npm start
+## 🛠️ Quick Setup Guide
+
+1. Clone the repository  
+   `git clone https://github.com/omkarsinghoks/live-poll.git`
+
+2. Move into the project folder  
+   `cd LivePoll`
+
+3. Go into the backend folder and install dependencies  
+   `cd backend`  
+   `npm install`
+
+4. Create a `.env` file inside the backend folder and add the following:
+PORT=3000
+DB_CONNECTION=your_mongodb_url
+SALT_ROUNDS=6
+JWT_PRIVATE=your_jwt_secret
+CLIENT_URL=http://localhost:5173
+
+5. Now go to the frontend folder  
+`cd ../frontend`
+
+6. Install frontend dependencies  
+`npm install`
+
+7. Create a `.env` file inside the frontend folder and add:
+VITE_BACKEND_URL=http://localhost:3000
+
+8. ✅ You're all set!  
+Run the backend and frontend servers and test your project in the browser at:  
+[http://localhost:3000](http://localhost:5173)
+
+
+
