@@ -119,7 +119,7 @@ VITE_BACKEND_URL=http://localhost:3000
 Run the backend and frontend servers and test your project in the browser at:  
 [http://localhost:3000](http://localhost:5173)
 
-
+```bash
 ## 🔁 State Sharing & Room Management Architecture
 
 The application implements real-time vote synchronization using a **pub/sub model** with **WebSocket (Socket.io)** connections.
